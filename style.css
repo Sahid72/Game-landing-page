@@ -10,8 +10,8 @@
 .hero-section{
     background-image:linear-gradient(#ffb64823,#02020238),linear-gradient(rgba(218, 165, 32, 0.835),transparent,transparent,rgba(2, 2, 2, 0.198),black), url(./figma/hero.png);
     width: 100vw;
-    min-height: 1000px;
-    height: 110vh;
+    min-height: 1200px;
+    padding-bottom: 50px;
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -124,13 +124,20 @@
 .slider-section{
     background-image: linear-gradient(rgb(0, 0, 0),rgba(31, 30, 30, 0.705),rgb(0, 0, 0)),url(./figma/img2.png);
     width: 100vw;
-    height:110vh;
-    min-height: 1000px;
+    min-height: 1200px;
+    padding: 50px 0px;
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
+}
+
+.slider-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: inherit;
 }
 
 /* slider design  */
@@ -249,11 +256,10 @@
      
   }
   .slider-heading{
-     
       padding-bottom: 20px;
       position: relative;
       left: 200px;
-      z-index: 1;
+      width:600px;
       
   }
 
@@ -290,17 +296,24 @@
 .big-man-section{
   background-image:linear-gradient(black,rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.8),black),url("figma/cartoon.jpg");
   transform: scaleX(-1);
-  height: 100vh;
   width: 100vw;
-  min-height: 1000px;
+  min-height: 1200px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left;
+  padding: 50px 0px;
 }
 
-.big-man-section .big-man-text-contaier{
+.big-man-text-container{
   transform: scaleX(-1);
   color: white;
+  min-height: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  left: 200px;
 
 }
 
@@ -366,9 +379,9 @@
 
 .requirement-section{
   background-image:linear-gradient(black,rgba(0,0,0,0.8),rgba(0,0,0,.5),transparent,transparent,rgba(0,0,0,.5),rgba(0,0,0,0.8),black), url("figma/img1.png");
-  height: 110vh;
   width: 100vw;
   min-height: 1000px;
+  padding: 50px 0px;
   background-position: top left;
   background-repeat: no-repeat;
   color: white;
@@ -425,8 +438,8 @@
 
 .queotes-section{
   background-image: linear-gradient(to right,rgba(0,0,0,0.6),rgba(0,0,0,.4),rgba(0, 0, 0, 0.9),black,black),url("figma/quotes\ bg.png");
-  height: 100vh;
-  min-height: 1000px;
+  min-height: 1100px;
+  padding: 50px 0px;
   background-position: center;
   width: 100vw;
   background-size: cover;
@@ -501,7 +514,8 @@
   font-size: 20px;
   color: white;
   margin: 40px 0px;
-  max-width: 440px;
+  max-width: 500px;
+  min-width: 440px;
   line-height: 30px;
   word-spacing: 3px;
 }
@@ -533,11 +547,16 @@
   background-image:linear-gradient(#080a0b,#080a0b,#07090a,#080a0b,#060708),url("figma/lastSecbg.png");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
   min-height: 1000px;
   width: 100vw;
+  padding: 50px 0px;
 
 
+}
+.subscribe-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .skulimgCon{
   display: flex;
@@ -656,4 +675,99 @@ input[type=email]::placeholder{
 
 .footer2nd-nav p {
   letter-spacing: 1px;
+}
+
+
+@media only screen and (max-width:900px) {
+
+  h1 {
+    font-size: 30px;
+  }
+ .middle-nav {
+   display: none;
+ }
+
+ img{
+   background-position: top center;
+ }
+
+.big-man-section {
+  background-position: right top;
+}
+.big-man-text-contaier{
+  width: 100% !important;
+}
+
+.specification-container {
+  width: 100% !important;
+  grid-template-columns: repeat(2,minmax(200px,300px));
+  margin: auto;
+  position: static;
+  justify-content: center;
+}
+.requirement-section .heading-text{
+  position: static;
+}
+.card-container{
+  width:100vw;
+  position: static;
+  margin: auto;
+  display: block;
+}
+.single-card{
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  position: static;
+  width:320px;
+  padding: 10px 25px;
+}
+.quotes-container{
+  display: block !important;
+  text-align: center;
+  margin: auto;
+}
+
+.quotes-left-text{
+  display: block;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.sliCon{
+  width: 100%;
+
+}
+.slider-heading{
+  text-align: center;
+  position: static;
+  margin:40px auto;
+  margin: auto;
+}
+.slider-wrapper{
+  display: block !important;
+  margin:30px 0px;
+}
+
+.subscribe-wrapper{
+  display: initial;
+  position: static;
+  text-align: center;
+}
+.subscribe-wrapper button {
+  margin-top: 20px;
+}
+.skulimgCon{
+  margin: auto;
+  position: static;
+  display: block;
+  margin-bottom: 50px;
+}
+.skulimgCon img {
+  height: 400px;
+}
+.big-man-text-container{
+position: static;
+justify-content: center;
+}
 }
