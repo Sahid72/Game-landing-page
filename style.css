@@ -1,0 +1,659 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family:Open Sans;
+}
+
+
+
+.hero-section{
+    background-image:linear-gradient(#ffb64823,#02020238),linear-gradient(rgba(218, 165, 32, 0.835),transparent,transparent,rgba(2, 2, 2, 0.198),black), url(./figma/hero.png);
+    width: 100vw;
+    min-height: 1000px;
+    height: 110vh;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+/* navigation design  */
+.hero-section > div{
+    top: 20px;
+    font-size: 12px;
+    position: relative;
+
+}
+/* logo design  */
+.logo img{
+    height: 55px;
+    width: 55px;
+}
+
+/* middle navigation anchor design  */
+.middle-nav a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin: 0px 5px;
+    padding:5px 15px;
+    font-size: 16px;
+}
+.middle-nav a:hover{
+    color: rgb(235, 235, 235);
+}
+
+/* dropdown style  */
+
+.nav-dropwdown .dropdown-item:hover{
+    color: #ffb548 !important;
+    background-color: transparent;
+}
+.nav-dropwdown .dropdown-item{
+    font-size: 12px;
+    font-weight: bold;
+}
+.nav-icon img {
+    height: 30px;
+    margin-left: 15px;
+}
+.dropdown-border-right{
+    padding-right: 10px;
+    border-right: 1.5px solid white;
+}
+
+.dropdown-border-right button{
+    font-size: 16px;
+}
+.dropdown-border-right button:active{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+/* Hero main text area design */
+
+.hero-middle{
+    position: relative;
+    top: 300px;
+}
+.heading-hero{
+    font-size: 80px;
+    font-family: Bebas Neue;
+    letter-spacing: 5px;
+    color: white;
+}
+.sub-heading-hero{
+    font-size: 24px;
+    font-family: Bebas Neue;
+    letter-spacing: 4px;
+    color: white;
+    text-align: center;
+    line-height:10px;
+}
+
+/* hero button design  */
+
+.hero-middle button{
+    background-color: #ffb548;
+    border: none;
+    padding:15px 20px;
+    font-family: Open Sans;
+    font-weight: bold;
+    margin-top: 40px ;
+    border-radius: 2px;
+    font-size: 18px;
+}
+
+.hero-last{
+   
+    position: relative;
+    top: 550px;
+}
+
+
+
+
+
+
+
+
+/* ******Slider section/ section-2***** */
+
+.slider-section{
+    background-image: linear-gradient(rgb(0, 0, 0),rgba(31, 30, 30, 0.705),rgb(0, 0, 0)),url(./figma/img2.png);
+    width: 100vw;
+    height:110vh;
+    min-height: 1000px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+/* slider design  */
+
+.sliCon {
+    height: 600px;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 500px 100px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  main#carousel {
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    --items: 5;
+    --middle: 3;
+    --position: 1;
+    pointer-events: none;
+  }
+  
+  div.item {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    background-color: coral;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    transform: rotateY(calc(-10deg * var(--r)))
+      translateX(calc(-300px * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+    border-radius: 10px;
+  }
+  
+  div.item:nth-of-type(1) {
+    --offset: 1;
+    background-color: #90f1ef;
+  }
+  div.item:nth-of-type(2) {
+    --offset: 2;
+    background-color: #ff70a6;
+  }
+  div.item:nth-of-type(3) {
+    --offset: 3;
+    background-color: #ff9770;
+  }
+  div.item:nth-of-type(4) {
+    --offset: 4;
+    background-color: #ffd670;
+  }
+  div.item:nth-of-type(5) {
+    --offset: 5;
+    background-color: #e9ff70;
+  }
+  
+  input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(1):checked ~ main#carousel {
+    --position: 1;
+  }
+  
+  input:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(2):checked ~ main#carousel {
+    --position: 2;
+  }
+  
+  input:nth-of-type(3) {
+    grid-column: 4 /5;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(3):checked ~ main#carousel {
+    --position: 3;
+  }
+  
+  input:nth-of-type(4) {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(4):checked ~ main#carousel {
+    --position: 4;
+  }
+  
+  input:nth-of-type(5) {
+    grid-column: 6 / 7;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(5):checked ~ main#carousel {
+    --position: 5;
+  }
+
+  .item img {
+      height: 100%;
+      min-width:100%;
+      object-fit: cover;
+  }
+  .item{
+      overflow: hidden;
+      box-shadow: 2px 2px 10px  rgba(0, 0, 0, 0.301),
+      -2px 0px 10px rgba(0, 0, 0, 0.301);
+     
+  }
+  .slider-heading{
+     
+      padding-bottom: 20px;
+      position: relative;
+      left: 200px;
+      z-index: 1;
+      
+  }
+
+  .slider-heading h1, .slider-heading h5{
+    font-family: bebas neue;
+    
+  }
+
+  
+  .slider-heading h5{
+      letter-spacing: 2px;
+      font-size: 24px;
+      
+  }
+  .slider-heading h1{
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: 6px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    margin-bottom: 15px;
+}
+
+.slider-paragraph p {
+  font-size: 20px;
+  word-spacing: 3px;
+}
+
+/****** big man section under slider section or known as section 3  *******/
+
+
+
+
+.big-man-section{
+  background-image:linear-gradient(black,rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.8),black),url("figma/cartoon.jpg");
+  transform: scaleX(-1);
+  height: 100vh;
+  width: 100vw;
+  min-height: 1000px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+}
+
+.big-man-section .big-man-text-contaier{
+  transform: scaleX(-1);
+  color: white;
+
+}
+
+ .circle-b{
+  background-color: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-top:16px;
+  margin-right: 25px;
+
+
+}
+.circle-b::after{
+  content:"";
+  height: 155px;
+  width: 3px;
+  background-color:white;
+  position: absolute;
+  margin-left: 9px;
+}
+
+.circle-a{
+  border: 3px solid white;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  margin-top:135px;
+}
+.circle-d{
+  border: 3px solid white;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  margin-top:47px;
+
+}
+.big-man-heading h5{
+  font-family: Bebas Neue;
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+.big-man-heading h1{
+  font-family: Bebas Neue;
+  font-size: 80px;
+  letter-spacing: 5px;
+}
+.big-man-information h3{
+ font-family: Bebas Neue; 
+ font-size: 36px;
+ letter-spacing: 3px;
+ color: #ffb548;
+ line-height: 60px;
+}
+.big-man-paragraph {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+
+/****** requirement section  ******/
+
+
+.requirement-section{
+  background-image:linear-gradient(black,rgba(0,0,0,0.8),rgba(0,0,0,.5),transparent,transparent,rgba(0,0,0,.5),rgba(0,0,0,0.8),black), url("figma/img1.png");
+  height: 110vh;
+  width: 100vw;
+  min-height: 1000px;
+  background-position: top left;
+  background-repeat: no-repeat;
+  color: white;
+}
+.requirement-section .heading-text{
+  position: relative;
+  top: 180px;
+}
+.requirement-section .heading-text  h5{
+  font-family: bebas neue;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+.requirement-section .heading-text  h1{
+  font-family: bebas neue;
+  font-size: 80px;
+  letter-spacing: 3px;
+}
+
+.specification-container{
+  display: grid;
+  grid-template-columns: repeat(2,420px);
+  grid-template-rows: repeat(3,180px);
+  width: 950px;
+  position: relative;
+  top: 250px;
+  left: 100px;
+
+  
+}
+
+.specification-container >*{
+
+  border: 1px solid gray;
+  padding: 15px 25px;
+
+}
+.specification-container h4 {
+  font-family: bebas neue;
+  font-size: 24px;
+  color: #ffb548;
+  letter-spacing: 2px;
+
+}
+.specification-container p{
+  font-size: 18px;
+}
+.specification-container div:last-child{
+ grid-column: span 2;
+ clip-path: polygon(0 0, 100% 0, 100% 100%, 57% 100%, 55% 95%, 45% 95%, 43% 100%,0 100% );
+}
+
+/* quotes section under requirement section  */
+
+.queotes-section{
+  background-image: linear-gradient(to right,rgba(0,0,0,0.6),rgba(0,0,0,.4),rgba(0, 0, 0, 0.9),black,black),url("figma/quotes\ bg.png");
+  height: 100vh;
+  min-height: 1000px;
+  background-position: center;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.single-card{
+  width: 550px;
+  min-height: 220px;
+  background-color: #1a1b1c;
+  border-radius: 10px;
+  position: relative;
+  margin: 30px 0px;
+  margin-left: 40%;
+  padding: 20px 50px;
+  box-sizing: border-box;
+}
+.single-card img{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.single-card img:after{
+  content: "";
+  background-color: #ffb548;
+  box-shadow: 5px 0px 0 10px #ffb548;
+  position:absolute;
+  left: 5px;
+}
+.gamer-name{
+  font-family: bebas neue;
+  color: #ffb548;
+  letter-spacing: 2px;
+  font-size: 24px;
+}
+
+.single-card div:last-child p:first-child{
+  font-size: 18px;
+}
+.single-card div:last-child p:last-child{
+  font-size: 16px;
+  margin-top: 10px;
+}
+.gamer-twiter{
+  position: absolute;
+  left: 78%;
+  top: 15%;
+  font-size: 18px;
+}
+.quotes-left-text{
+  width: 40%;
+  margin: auto;
+}
+.quotes-left-text h4{
+  font-family: bebas neue;
+  font-size: 24px;
+  color: white;
+  letter-spacing: 3px;
+}
+
+.quotes-left-text h1{
+  font-family: bebas neue;
+  font-weight: bold;
+  font-size: 80px;
+  letter-spacing: 6px;
+  color: white;
+  margin-bottom: 0px;
+}
+
+.quotes-left-text p{
+  font-size: 20px;
+  color: white;
+  margin: 40px 0px;
+  max-width: 440px;
+  line-height: 30px;
+  word-spacing: 3px;
+}
+.quotes-left-text button{
+  background-color: #ffb548;
+  font-weight: bold;
+  padding: 10px 30px;
+  font-size: 20px;
+}
+
+.card-container{
+  width: 60%;
+}
+
+.second-card{
+  margin-left: 20%;
+}
+
+.Third-card{
+  margin-left: 35%;
+
+}
+
+
+/* subscribe section under QUOTES section  */
+
+
+.subscribe-section{
+  background-image:linear-gradient(#080a0b,#080a0b,#07090a,#080a0b,#060708),url("figma/lastSecbg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  min-height: 1000px;
+  width: 100vw;
+
+
+}
+.skulimgCon{
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+.skulimgCon img{
+  height: 695px;
+}
+
+.subscribe-right-sec{
+  width: 60%;
+  margin: auto;
+  display: flex;
+}
+.subscribe-text-wrapper{
+  max-width: 720px;
+  margin: auto;
+}
+
+.subscribe-right-sec h4{
+  font-family: bebas neue;
+  font-size: 24px;
+  letter-spacing: 2px;
+
+}
+
+.subscribe-right-sec h1 {
+  font-family: bebas neue;
+  font-size: 80px;
+  letter-spacing: 3px;
+}
+
+.subscribe-right-sec p{
+  font-size:20px;
+  margin: 50px 0px;
+  word-spacing: 3px;
+}
+
+.subscribe-right-sec input[type=email]{
+  width: 370px;
+  height: 60px;
+  padding: 0 20px;
+  font-size: 20px;
+  background:#1c1e1f;
+  border: none;
+  outline: rgb(163, 58, 58);
+  color: #2eb329;
+  border-radius: 4px;
+}
+
+input[type=email]::placeholder{
+  color:  #494949;
+}
+.subscribe-right-sec button {
+  background:#ffb548;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  height: 60px;
+  width: 260px;
+  border-radius: 4px;
+
+}
+
+
+/* footer  design last section  */
+.footer-bg {
+  background: #060708;
+  width: 100vw;
+  min-height: 200px;
+}
+.footer-nav img {
+  height: 80px;
+}
+.footer-nav {
+  border-bottom: 1px solid white;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  margin: 0px 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition:.1s ease-in-out;
+}
+.footer-nav a:hover{
+  color: rgb(26, 126, 219);
+  transform: scale(102%);
+}
+
+
+
+.footer-nav a li {
+  font-size: 22px;
+}
+
+
+
+
+.footer2nd-nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding: 0 25px;
+  border-right: 1px solid white;
+  letter-spacing: 2px;
+}
+.footer2nd-nav a:last-child {
+  border: none;
+}
+
+.footer2nd-nav p {
+  letter-spacing: 1px;
+}
