@@ -463,13 +463,7 @@
   border-radius: 50%;
 }
 
-.single-card img:after{
-  content: "";
-  background-color: #ffb548;
-  box-shadow: 5px 0px 0 10px #ffb548;
-  position:absolute;
-  left: 5px;
-}
+
 .gamer-name{
   font-family: bebas neue;
   color: #ffb548;
@@ -484,11 +478,11 @@
   font-size: 16px;
   margin-top: 10px;
 }
-.gamer-twiter{
-  position: absolute;
+.gamer-twitter{
   left: 78%;
   top: 15%;
   font-size: 18px;
+  position: absolute;
 }
 .quotes-left-text{
   width: 40%;
@@ -715,7 +709,7 @@ input[type=email]::placeholder{
   display: block;
   margin: 0 auto;
   margin-bottom: 20px;
-  position: static;
+  position: relative;
   width:320px;
   padding: 10px 25px;
 }
@@ -730,6 +724,10 @@ input[type=email]::placeholder{
   width: 80%;
   margin: auto;
   margin-bottom: 50px;
+}
+.gamer-twitter{
+  position: relative;
+  display: none !important;
 }
 .sliCon{
   width: 100%;
